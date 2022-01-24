@@ -1,0 +1,10 @@
+.section {
+    width: 100%;
+    &.index {
+        background-image: url('../public/images/home.webp');
+        background-size: 100% 100%;
+    }
+    &.works {
+        display: flex;
+    }
+}
