@@ -45,17 +45,7 @@ export default function Home() {
   });
   useLayoutEffect(() => {});
 
-  useEffect(() => {
-    if (window) {
-      const w = window.screen.availWidth;
-      const h = (w / 80) * 45;
-      console.log("h", h);
-      setClientInfo({
-        width: w + "px",
-        height: h + "px",
-      });
-    }
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <Layout home>
