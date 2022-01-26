@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useState, useEffect, useLayoutEffect, useReducer } from "react";
 import Layout, { siteTitle } from "../components/layout";
-import styles from "./index.module.scss";
+import styles from "./index.module.css";
 import WorkList from "../components/workList/index";
 import {
   Link,
@@ -48,9 +48,6 @@ export default function Home() {
       },
     ];
   });
-  useLayoutEffect(() => {});
-
-  useEffect(() => {}, []);
 
   return (
     <Layout home>
