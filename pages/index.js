@@ -3,12 +3,17 @@ import { useState, useEffect, useLayoutEffect, useReducer } from "react";
 import Layout, { siteTitle } from "../components/layout";
 import styles from "./index.module.scss";
 import WorkList from "../components/workList/index";
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 
 export default function Home() {
-  const [clientInfo, setClientInfo] = useState({
-    width: "100%",
-    height: "100%",
-  });
   const [works] = useState(() => {
     return [
       {
@@ -52,14 +57,38 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <header>
+        <Link
+          activeClass="active"
+          to="hello"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}
+        >
+          welcome
+        </Link>
+        <Link
+          activeClass="active"
+          to="work"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}
+        >
+          works
+        </Link>
+      </header>
       <main>
-        <div
-          className={`${styles.section} ${styles.index}`}
-          style={{ width: clientInfo.width, height: clientInfo.height }}
-        ></div>
-        <div className={`${styles.section} ${styles.works}`}>
-          <WorkList list={works} />
-        </div>
+        <Element name="hello" className="element">
+          <div className={`${styles.section} ${styles.hello}`}></div>
+        </Element>
+        <Element name="work" className="element">
+          <div className={`${styles.section} ${styles.works}`}>
+            <WorkList list={works} />
+          </div>
+        </Element>
+
         <div></div>
       </main>
     </Layout>
