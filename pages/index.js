@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useState, useEffect, useLayoutEffect, useReducer } from "react";
 import Layout, { siteTitle } from "../components/layout";
+import Demo from "../components/animal/index";
 import styles from "./index.module.scss";
 import WorkList from "../components/workList/index";
 import {
@@ -99,7 +100,15 @@ export default function Home() {
       <main>
         <Element name="hello" className="element">
           <div className={`${styles.section} ${styles.hello}`}>
-            <h1>Welcome To My Website</h1>
+            <h1>
+              你好
+              <br />
+              我是张学峰，
+              <br />
+              一名前端开发。
+            </h1>
+            <h2>热爱生活，热爱编程，相信技术改变生活。</h2>
+            <Demo />
           </div>
         </Element>
         <Element name="work" className="element">

@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { useMemo } from "react";
 import WorkItem from "../work/index";
 import styles from "./index.module.scss";
 

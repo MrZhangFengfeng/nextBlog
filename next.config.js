@@ -1,6 +1,7 @@
 const withImages = require("next-images");
 const withTM = require("next-transpile-modules")(["antd-mobile"]);
 const isProd = process.env.NODE_ENV === "production";
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 /**
  * @type {import('next').NextConfig}
  */
@@ -20,7 +21,6 @@ module.exports = withTM(
      * @param {string} isServer   It's true for server-side compilation, and false for client-side compilation
      */
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-      // Important: return the modified config
       return config;
     },
     images: {

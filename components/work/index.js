@@ -3,7 +3,7 @@ import styles from "./index.module.scss";
 import Image from "next/image";
 const WorkItem = ({ work = {} }) => {
   return (
-    <div className={styles.item}>
+    <div className={styles.item} key={work.title}>
       <div className={styles.poster}>
         <Image src={work.poster} alt={work.title} width={150} height={270} />
       </div>
