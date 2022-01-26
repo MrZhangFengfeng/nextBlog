@@ -24,7 +24,11 @@ module.exports = withTM(
       return config;
     },
     images: {
-      domains: ["images3.c-ctrip.com", "r.photo.store.qq.com"],
+      domains: [
+        "images3.c-ctrip.com",
+        "r.photo.store.qq.com",
+        "pages.c-ctrip.com",
+      ],
     },
     // 页面还是abandoned  但是内容展示的是/posts/list
     async rewrites() {

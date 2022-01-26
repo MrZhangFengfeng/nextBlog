@@ -5,13 +5,9 @@ const WorkItem = ({ work = {} }) => {
   return (
     <div className={styles.item} key={work.title}>
       <div className={styles.poster}>
-        <Image src={work.poster} alt={work.title} width={150} height={270} />
+        <Image src={work.poster} alt={work.title} width={500} height={400} />
       </div>
-      <div className={styles.info}>
-        <div className={styles.title}>{work.title}</div>
-        <div className={styles.skills}>{work.skills}</div>
-        <div className={styles.desc}>{work.desc}</div>
-      </div>
+      <div className={styles.title}>{work.title}</div>
     </div>
   );
 };
