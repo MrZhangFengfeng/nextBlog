@@ -23,6 +23,9 @@ module.exports = withTM(
       // Important: return the modified config
       return config;
     },
+    images: {
+      domains: ["images3.c-ctrip.com", "r.photo.store.qq.com"],
+    },
     // 页面还是abandoned  但是内容展示的是/posts/list
     async rewrites() {
       return [
