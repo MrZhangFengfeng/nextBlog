@@ -3,6 +3,7 @@ import Layout, { siteTitle } from "../components/layout";
 import Demo from "../components/animal/index";
 import styles from "./index.module.scss";
 import WorkList from "../components/workList/index";
+import Skills from "../components/skills/index";
 import Contact from "../components/contact/index";
 import { Link, Element, animateScroll as scroll } from "react-scroll";
 
@@ -64,7 +65,9 @@ export default function Home() {
           </div>
         </Element>
         <Element name="skills">
-          <div className={`${styles.section} ${styles.skills}`}></div>
+          <div className={`${styles.section} ${styles.skills}`}>
+            <Skills />
+          </div>
         </Element>
         <Element name="contact">
           <div className={`${styles.section} ${styles.contact}`}>

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "./index.module.scss";
 import Image from "next/image";
 const WorkItem = ({ work = {} }) => {
