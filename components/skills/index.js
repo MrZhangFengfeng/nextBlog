@@ -21,10 +21,13 @@ const Skills = () => {
         <text x="120" y="140" fill="black" className={styles.svgtext}>
           前端工程化
         </text>
+        <text x="330" y="280" fill="black" className={styles.svgtext}>
+          JavaScript
+        </text>
         <circle
           cx="150"
           cy="150"
-          r="10"
+          r="5"
           stroke="black"
           stroke-width="2"
           fill="black"
@@ -32,7 +35,7 @@ const Skills = () => {
         <circle
           cx="375"
           cy="300"
-          r="15"
+          r="10"
           stroke="black"
           stroke-width="2"
           fill="black"

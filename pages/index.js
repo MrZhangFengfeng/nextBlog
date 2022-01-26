@@ -55,7 +55,7 @@ export default function Home() {
               <br />
               一名前端开发。
             </h1>
-            <h2>热爱生活，热爱编程，相信技术改变生活。</h2>
+            <h2>热爱生活，积极乐观，相信明天总是美好的。</h2>
             <Demo />
           </div>
         </Element>
