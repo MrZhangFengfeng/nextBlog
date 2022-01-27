@@ -11,7 +11,7 @@ module.exports = withTM(
       customKey: "my-value", // return <h1>The value of customKey is: {process.env.customKey}</h1>
     },
     basePath: "",
-    assetPrefix: isProd ? "https://cdn.mydomain.com" : "",
+    assetPrefix: isProd ? "https://zhangxuefengblog.vercel.app/" : "",
     compress: true, // 默认开启使用gzip压缩内容和资源文件
     /**
      * webpack拓展， 会在客户端和服务端分别执行一次 可以通过 isServer 来执行特定操作
