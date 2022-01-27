@@ -6,16 +6,23 @@ import WorkList from "../components/workList/index";
 import Skills from "../components/skills/index";
 import Contact from "../components/contact/index";
 import { getSkillData } from "../lib/skill";
-import { Link, Element, animateScroll as scroll } from "react-scroll";
+import { getWorkData } from "../lib/work";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  Link as ScrollLink,
+  Element,
+  animateScroll as scroll,
+} from "react-scroll";
 
-export default function Home({ skillData }) {
+export default function Home({ skillData, workData }) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <header className={styles.header}>
-        <Link
+        <ScrollLink
           activeClass="active"
           to="hello"
           spy={true}
@@ -24,8 +31,8 @@ export default function Home({ skillData }) {
           duration={500}
         >
           welcome
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           activeClass="active"
           to="work"
           spy={true}
@@ -34,8 +41,8 @@ export default function Home({ skillData }) {
           duration={500}
         >
           works
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           activeClass="active"
           to="skills"
           spy={true}
@@ -44,7 +51,7 @@ export default function Home({ skillData }) {
           duration={500}
         >
           skills
-        </Link>
+        </ScrollLink>
       </header>
       <main>
         <Element name="hello" className="element">
@@ -62,12 +69,25 @@ export default function Home({ skillData }) {
         </Element>
         <Element name="work">
           <div className={`${styles.section} ${styles.works}`}>
-            <WorkList />
+            <WorkList workData={workData} />
           </div>
         </Element>
         <Element name="skills">
           <div className={`${styles.section} ${styles.skills}`}>
             <Skills skillData={skillData} />
+          </div>
+        </Element>
+        <Element name="solution">
+          <div className={`${styles.section} ${styles.solution}`}>
+            <h2 className={styles.title}>前端业务解决方案</h2>
+            <Link href={`/solution`}>
+              <Image
+                src={"/images/hongmeng.png"}
+                alt={"前端业务解决方案"}
+                width={375}
+                height={180}
+              />
+            </Link>
           </div>
         </Element>
         <Element name="contact">
@@ -82,9 +102,11 @@ export default function Home({ skillData }) {
 
 export const getServerSideProps = (context) => {
   const skillData = getSkillData();
+  const workData = getWorkData();
   return {
     props: {
       skillData,
+      workData,
     },
   };
 };

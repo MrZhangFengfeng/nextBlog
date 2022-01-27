@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "./layout.module.css";
 import Link from "next/link";
 
-export const siteTitle = "Chris Blog";
+export const siteTitle = "小张小张 运气高涨";
 
 export default function Layout({ children, home }) {
   return (

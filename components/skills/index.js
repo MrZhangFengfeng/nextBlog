@@ -70,7 +70,7 @@ const Skills = ({ skillData }) => {
   });
   return (
     <div className={styles.wrap}>
-      <div className={styles.title}>Skills</div>
+      <div className={styles.title}>技术栈</div>
       <div id="container"></div>
     </div>
   );
