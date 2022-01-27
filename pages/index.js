@@ -52,6 +52,16 @@ export default function Home({ skillData, workData }) {
         >
           skills
         </ScrollLink>
+        <ScrollLink
+          activeClass="active"
+          to="solution"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+        >
+          solution
+        </ScrollLink>
       </header>
       <main>
         <Element name="hello" className="element">
