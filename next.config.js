@@ -28,6 +28,7 @@ module.exports = withTM(
         "images3.c-ctrip.com",
         "r.photo.store.qq.com",
         "pages.c-ctrip.com",
+        "sf1-scmcdn-tos.pstatp.com",
       ],
     },
     // 页面还是abandoned  但是内容展示的是/posts/list

@@ -6,7 +6,7 @@ const Skills = ({ skillData }) => {
   useLayoutEffect(() => {
     const container = document.getElementById("container");
     const width = container.scrollWidth;
-    const height = container.scrollHeight || 500;
+    const height = container.scrollHeight || 400;
     const graph = new G6.TreeGraph({
       container: "container",
       width,
