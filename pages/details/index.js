@@ -69,7 +69,14 @@ const WorkDetail = () => {
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <Image src={workDetail.poster} width={375} height={300} />
+          <div
+            className={styles.poster}
+            style={{
+              backgroundImage: `url(${workDetail.poster})`,
+              backgroundSize: "100% 100%",
+            }}
+          ></div>
+
           <div className={styles.content}>
             <h1 className={styles.title}>{workDetail.title}</h1>
             <div className={styles.gap}></div>
