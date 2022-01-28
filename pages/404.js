@@ -2,6 +2,7 @@ import styles from './404.module.css'
 import { useEffect } from 'react';
 import animate from 'animejs'
 import Link from "next/link";
+import Head from "next/head";
 
 
 export default function Custom404() {
@@ -29,6 +30,9 @@ useEffect(()=>{
 })
 
   return <div className={styles.main}>
+    <Head>
+        <title>{'哎呦，跑偏咯'}</title>
+    </Head>
     <Link href="/home">
       <div className={styles.container}>
       <div className={styles.row}>

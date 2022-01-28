@@ -1,4 +1,5 @@
 import React, { useLayoutEffect, useState, useEffect } from "react";
+import Head from "next/head";
 import { Skeleton } from "antd-mobile";
 import Image from "next/image";
 import Link from "next/link";
@@ -60,6 +61,9 @@ const WorkDetail = () => {
 
   return (
     <div>
+      <Head>
+        <title>{"项目介绍"}</title>
+      </Head>
       {showSkeleton ? (
         <React.Fragment>
           <Skeleton animated className={styles.customImg} />
