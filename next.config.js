@@ -31,8 +31,8 @@ module.exports = withTM(
     async rewrites() {
       return [
         {
-          source: "/abandoned",
-          destination: "/posts/list",
+          source: "/home",
+          destination: "/",
         },
       ];
     },

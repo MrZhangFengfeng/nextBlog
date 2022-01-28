@@ -29,7 +29,7 @@ useEffect(()=>{
 })
 
   return <div className={styles.main}>
-    <Link href="/">
+    <Link href="/home">
       <div className={styles.container}>
       <div className={styles.row}>
         <div className={`${styles["col-sm-12"]} ${styles["col-md-12"]} ${styles["mt-5"]} ${styles["mb-5"]}`}>
