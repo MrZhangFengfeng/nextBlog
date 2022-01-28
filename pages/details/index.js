@@ -1,9 +1,10 @@
 import React, { useLayoutEffect, useState, useEffect } from "react";
-import { Skeleton, Image } from "antd-mobile";
+import { Skeleton } from "antd-mobile";
+import Image from "next/image";
 import styles from "./index.module.scss";
 import { getWorkDataDetail } from "../../lib/work";
 
-const WorkDetail = ({}) => {
+const WorkDetail = () => {
   const [showSkeleton, setShowSkeleton] = useState(true);
   const [workDetail, setWorkDetail] = useState({});
 
@@ -20,12 +21,12 @@ const WorkDetail = ({}) => {
       const workDetail = getWorkDataDetail(id);
       setWorkDetail(workDetail);
     }
-  });
+  }, []);
 
   useLayoutEffect(() => {
     setTimeout(() => {
       loadImage();
-    }, 1000);
+    }, 500);
   }, []);
   return (
     <div>
@@ -38,11 +39,16 @@ const WorkDetail = ({}) => {
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <Image src={workDetail.poster} onLoad={loadImage} />
+          <Image src={workDetail.poster} width={375} height={300} />
           <div className={styles.content}>
             <h1 className={styles.title}>{workDetail.title}</h1>
+            <div className={styles.gap}></div>
             <h2 className={styles.technologyStack}>
-              技术栈：{workDetail.technologyStack}
+              {workDetail.technologyStack.map((item) => {
+                return (
+                  <Image src={`/images/${item}.png`} width={50} height={50} />
+                );
+              })}
             </h2>
             <p>{workDetail.desc}</p>
           </div>

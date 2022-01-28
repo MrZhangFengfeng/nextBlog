@@ -9,13 +9,28 @@
     margin: 0 auto;
 }
 .content {
-    width: 90%;
-    margin: 20px auto 0;
+    width: 100%;
     padding-bottom: 50px;
     .title {
         font-size: 40px;
+        width: 90%;
+        margin: 20px auto 0;
+    }
+    .gap {
+        widows: 100%;
+        height: 10px;
+        border-bottom: 2px solid rgba($color: #d6d6d6, $alpha: .5);
+        box-shadow: 0px 2px 2px #d6d6d6;
     }
     .technologyStack {
-        font-size: 32px;
+        width: 90%;
+        margin: 30px auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        img {
+            border-radius: 10px;
+            overflow: hidden;
+        }
     }
 }
