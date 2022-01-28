@@ -91,12 +91,19 @@ export default function Home({ skillData, workData }) {
           <div className={`${styles.section} ${styles.solution}`}>
             <h2 className={styles.title}>前端业务解决方案</h2>
             <Link href={`/solution`}>
-              <Image
+              {/* <Image
                 src={"/images/hongmeng.png"}
                 alt={"前端业务解决方案"}
                 width={375}
                 height={180}
-              />
+              /> */}
+              <div
+                className={styles["solution-img"]}
+                style={{
+                  backgroundImage: `url('/images/hongmeng.png')`,
+                  backgroundSize: "100% 100%",
+                }}
+              ></div>
             </Link>
           </div>
         </Element>
