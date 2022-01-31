@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useState, useEffect } from "react";
 import Head from "next/head";
-import { Skeleton } from "antd-mobile";
+import { Skeleton, WaterMark } from "antd-mobile";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./index.module.scss";
@@ -61,6 +61,7 @@ const WorkDetail = () => {
 
   return (
     <div>
+      <WaterMark content="zhangxuefeng" />
       <Head>
         <title>{"项目介绍"}</title>
       </Head>

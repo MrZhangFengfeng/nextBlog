@@ -14,7 +14,7 @@ const WorkList = ({ workData }) => {
 
   return (
     <div className={styles.wrap}>
-      <h2 className={styles.title}>过往产品</h2>
+      <h2 className={styles.title}>搬砖记录</h2>
       <Swiper
         autoplay
         slideSize={70}

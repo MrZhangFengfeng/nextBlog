@@ -89,14 +89,8 @@ export default function Home({ skillData, workData }) {
         </Element>
         <Element name="solution">
           <div className={`${styles.section} ${styles.solution}`}>
-            <h2 className={styles.title}>前端业务解决方案</h2>
+            <h2 className={styles.title}>常见业务需求</h2>
             <Link href={`/solution`}>
-              {/* <Image
-                src={"/images/hongmeng.png"}
-                alt={"前端业务解决方案"}
-                width={375}
-                height={180}
-              /> */}
               <div
                 className={styles["solution-img"]}
                 style={{
