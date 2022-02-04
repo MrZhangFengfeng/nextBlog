@@ -7,7 +7,7 @@ const Skills = ({ skillData }) => {
     const container = document.getElementById("container");
     const width = container.scrollWidth;
     const height = container.scrollHeight || 400;
-    const graph = new G6.TreeGraph({
+    const graph = new G6.TreeGraphi({
       container: "container",
       width,
       height,
